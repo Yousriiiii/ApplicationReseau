@@ -46,3 +46,4 @@ Une fois les modifications apportées, une nouvelle page de réservation est aff
 
 ## Chose à améliorer
 Une amélioration que je pourrais apporter serait de différencier chaque ticket pour chaque personne, afin de permettre la suppression d'un ticket spécifique sans supprimer l'ensemble des tickets.
+Et crée un nom de domaine dans mon réseau local pour avoir accés au site par le nom de domaine.
