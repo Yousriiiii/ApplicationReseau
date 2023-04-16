@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Connexion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          /* Style général pour le formulaire */
+          form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 0 auto;
+          }
+
+          /* Style pour les labels */
+          label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 16px;
+          }
+
+          /* Style pour les inputs */
+          input[type="email"],
+          input[type="password"],
+          input[type="submit"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+          }
+
+          /* Style pour le bouton de soumission */
+          input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+
+          /* Style pour le bouton de soumission au survol */
+          input[type="submit"]:hover {
+            background-color: #3e8e41;
+          }
+
+          /* Style pour les titres */
+          h1 {
+            text-align: center;
+            margin-bottom: 20px;
+          }
+
+        </style>
+    </head>
+    <body>        
+        <h1>Connexion</h1>
+        <form action="/" method="post">
+          <label>E-mail :</label>
+          <input type="email" name="mail" id="mail">
+
+          <label>Password :</label>
+          <input type="password" name="password" id="password">
+
+          <input type="submit" value="Se connecter">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mufa Park</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mufa Park</h1>
+    </header>
+    <main>
+        <section id="hero">
+            <h2>Venez vivre des aventures inoubliables !</h2>
+            <p>Notre parc d'aventure vous propose des activités pour toute la famille, dans un cadre naturel exceptionnel. Réservez dès maintenant pour vivre une expérience unique !</p>
+        </section>
+        <section id="activities">
+            <h2>Nos activités</h2>
+            <ul>
+                <li>
+                    <h3>Ski en intérieur</h3>
+                    <p>Skié en intérieur à -5°C en famille.</p>
+                </li>
+                <li>
+                    <h3>PaintBall</h3> 
+                    <p>Faites du paintall entre amis dans un terrain de 1 hectares. Le terrain renferme des zones comme une villes, une forêt et un lac</p>
+                </li>
+                <li>
+                    <h3>Parachute en intérieur</h3>
+                    <p>Faites du parachutisme en intérieur avec des professionnels.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="reservation_faite">
+            <h2>Vos réservation</h2>
+
+            <!-- <li th:each="reservation : ${listeReservation}">
+                <a th:href="@{/reservation?id={id_visiteur}/{id_billet}(id_billet=${reservation.ID_BILLET} , id_visiteur=${reservation.ID_VISITEUR} )}">
+                    <span th:text="'La date de votre réservation est ' + ${reservation.DATE_ACHAT} + 'et le prix de votre réservation est ' + ${reservation.PRIX_BILLET}"></span>
+                </a>
+            </li> -->
+            <li th:each="reservation : ${listeReservation}">
+                <span th:text="'La date de votre réservation est ' + ${reservation.DATE_ACHAT} + 'et le prix de votre réservation est ' + ${reservation.PRIX_BILLET}"></span>
+                <form method="post" th:action="@{/modifier-reservation/{id_visiteur}/{id_billet}(id_billet=${reservation.ID_BILLET}, id_visiteur=${reservation.ID_VISITEUR})}">
+                    <button type="submit">Modifier</button>
+                </form>
+                <form method="post" th:action="@{/supprimer-reservation/{id_visiteur}/{id_billet}(id_billet=${reservation.ID_BILLET}, id_visiteur=${reservation.ID_VISITEUR})}">
+                    <button type="submit">Supprimer</button>
+                </form>
+            </li>
+            
+
+        </section>
+
+        <section id="reservations">
+            <h2>Réservez maintenant</h2>
+            <form>
+                <label for="date">Date :</label>
+                <input type="date" id="date" name="date">
+                <label for="activity">Activité :</label>
+                <select id="activity" name="activity">
+                    <option value="parcours">Parcours dans les arbres</option>
+                    <option value="tyrolienne">Tyrolienne géante</option>
+                    <option value="randonnee">Randonnée en forêt</option>
+                </select>
+                <label for="participants">Participants :</label>
+                <input type="number" id="participants" name="participants">
+                <button type="submit">Réserver</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Mufa Park - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <title>Faire la réservation</title>
+        <!-- Bootstrap core CSS -->
+        <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="/reservation.css" rel="stylesheet">
+    </head>
+    <body class="text-center">
+        <main class="form-signin">
+            <img class="mb-4" src="/mufa_park.jpg" alt="" width="189" height="57">
+            <h1 class="h3 mb-3 fw-normal">Réservation</h1>
+            <label>Nouvelle date :</label>
+            <input type="date" name="date" class="form-control" autofocus="" id="date">
+            <label>Nouveau nombre de participant</label>
+            <input type="number" name="number" class="form-control" id="number" >
+            <label>Sélectionner votre nouvelle activité</label>
+            <select name="activity" id="activity">
+                <option value="SKI">Ski</option>
+                <option value="PARACHUTE">Parachute</option>
+                <option value="PAINTBALL">Paintball</option>
+            </select>
+            <hr>
+            <button class="w-100 btn btn-lg btn-primary" th:onclick="UpdateReservation([[${id}]] , [[${type}]] , [[${date}]] )" >Modifier votre réservation</button>
+        </main>
+        <script src="/assets/js/popper.min.js"></script>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <script>
+            function UpdateReservation(id , type , date){
+
+                const newDate = document.getElementById("date").value;
+                const newNumber = document.getElementById("number").value;
+                const newTypeActivity = document.getElementById("activity").value;
+
+                fetch("/ModifReservation/" + id +"/" + type + "/" + date, 
+                    { method : 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                        // 'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    redirect : 'follow', // manual, *follow, error
+                    referrerPolicy : 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                    body : JSON.stringify({type : newTypeActivity , date : newDate , number : newNumber})
+                    })
+                    .then(function (response) {
+                        //console.log(response);
+                        window.location="/MesReservation/" + id; // Je déplace l'utilisateur pour qu'il voit ses réservations
+                    });
+                }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <title>Vos réservations</title>
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="offcanvas.css" rel="stylesheet">
+    </head>
+    <body class="bg-light">
+        <!-- <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Offcanvas navbar</a>
+                <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Notifications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Switch account</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Settings</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li><a class="dropdown-item" href="#">Action</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Another action</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav> -->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-white bg-white" aria-label="Main navigation">
+            <a href="#" class="text-dark text-opacity-75" style="text-indent: 52px;">Accueil</a>
+        </nav>
+        <main class="container">
+            <div class="align-items-center bg-purple d-flex mb-3 mt-2 my-3 p-1 p-5 rounded shadow-sm text-white" style="height: 126px;">
+                <div class="lh-1">
+                    <h1 class=" h3 lh-1 mb-0 text-white">Nom_Visitor + Prenom_Visitor</h1>
+                    <small>Âge : age_visiteur</small><br><small>Taille : taille_visiteur</small><br><small>Poids : poids_visiteur</small>
+                </div>
+            </div>
+            <div class="my-3 p-3 bg-white rounded shadow-sm">
+                <h6 class="border-bottom pb-2 mb-0">Toutes les réservations</h6>
+                <div class="d-flex text-muted pt-3">
+                    <style>td, th { padding: 10px;  /* Ajoute 10 pixels d'espace entre chaque cellule et son contenu */ font-weight: bold; }</style>
+                    <table>
+                        <tr style="border-bottom: 1px solid black;">
+                            <td>Numéro de la réservation :</td>
+                            <td>Date de réservation :</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>date de réservation</td>
+                            <td>
+                                <form>
+                                    <button>Modifier la réservation</button>
+                                </form>
+                                <form>
+                                    <button>Supprimer la réservation</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>date de réservation 2</td>
+                            <td>
+                                <form>
+                                    <button type="submit">Modifier la réservation</button>
+                                </form>
+                                <form>
+                                    <button type="submit">Supprimer la réservation</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script>
+        (function () {
+            'use strict'
+
+            document.querySelector('[data-bs-toggle="offcanvas"]').addEventListener('click', function () {
+                document.querySelector('.offcanvas-collapse').classList.toggle('open')
+            })
+        })();
+    </script>
+    </body>
+</html>
