@@ -31,7 +31,7 @@ Après avoir confirmé sa réservation, celle-ci est sauvegardée dans une sessi
 </center>
 Lorsque la réservation est confirmée, l'utilisateur est redirigé vers la page d'accueil, où il peut consulter ses réservations en cliquant sur le bouton "Mes réservations", comme illustré ci-dessous :
 <center>
-  <img src="./assets_README/IMG/show_mesRDV.png" alt="Les rdv">
+  <img src="./assets_README/IMG/mes_rdv.png" alt="Les rdv">
 </center>
 Sur cette page, il peut supprimer ou modifier ses réservations. En cliquant sur le bouton "Supprimer", toutes les réservations sont supprimées.
 En cliquant sur le bouton "Modifier", l'utilisateur est redirigé vers une autre page où il peut modifier sa réservation, comme illustré ci-dessous :
