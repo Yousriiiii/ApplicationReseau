@@ -2,8 +2,8 @@
 ## Outils utilisés
 J'aimerai devenir un déveleppeur Full-Stack et pour cela, j'ai entrepris la création d'un serveur Web en utilisant le framework Spring en Java
 J'ai utilisé Pinegrow pour la conception de l'interface utilisateur du site Web.
-Enfin, j'ai opté pour H2 comme système de gestion de base de données SQL.
-
+Et, j'ai opté pour H2 comme système de gestion de base de données SQL.
+Le projet sera géré avec l'architecture Maven.
 ## Contraintes
 Les contraintes mises en places sont :
 1. Suivre une architecture stricte Modèle-Vue-Contrôleur (MVC)
