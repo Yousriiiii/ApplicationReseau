@@ -4,6 +4,7 @@ J'aimerai devenir un déveleppeur Full-Stack et pour cela, j'ai entrepris la cr�
 J'ai utilisé Pinegrow pour la conception de l'interface utilisateur du site Web.
 Et, j'ai opté pour H2 comme système de gestion de base de données SQL.
 Le projet sera géré avec l'architecture Maven.
+Et l'IDE utilisé est Visual Studio Code
 ## Contraintes
 Les contraintes mises en places sont :
 1. Suivre une architecture stricte Modèle-Vue-Contrôleur (MVC)
