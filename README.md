@@ -1,7 +1,7 @@
 # Mufa Park
-## Ce que j'ai utilisé
-J'essaie de devenir un déveleppeur full stack, et pour ca j'ai essayé de crée un serveur web avec le framework Spring en java.
-J'ai utilisé Pinegrow pour l'affichage du site web.
-Et enfin, j'ai utilisé H2 comme base de donnée sql.
+## Outils utilisés
+J'aimerai devenir un déveleppeur Full-Stack et pour cela, j'ai entrepris la création d'un serveur Web en utilisant le framework Spring en Java
+J'ai utilisé Pinegrow pour la conception de l'interface utilisateur du site Web.
+Enfin, j'ai opté pour H2 comme système de gestion de base de données SQL.
 ## Résultat
 TODO
